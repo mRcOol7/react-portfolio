@@ -1,0 +1,518 @@
+/* Resetting default margin, padding, and box-sizing */
+/* General Font Import for Futuristic Look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Sleek, modern font */
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* Light background color */
+  color: #333; /* Main text color */
+}
+/* Enhanced Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #009fff, #ec2f4b); /* Futuristic gradient */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Navbar.Brand Enhancements */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* White color for the text */
+}
+
+.navbar-brand img {
+  width: 60px; /* Large circular image */
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px; /* Increase space between image and text */
+  object-fit: cover; /* Ensure the image covers the area nicely without distortion */
+}
+
+.navbar-brand span {
+  font-size: 1.4rem; /* Slightly larger font size for the text */
+  font-weight: bold; /* Make the text bold for better visibility */
+  color: inherit; /* Ensure the text color matches the .navbar-brand color */
+  white-space: nowrap; /* Prevents the text from wrapping to a new line */
+  overflow: hidden; /* Hide any overflow if the text exceeds the width */
+  text-overflow: ellipsis; /* Add ellipsis for text overflow */
+  flex-grow: 1; /* Allow the span to grow and occupy remaining space */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease;
+  margin-left: 20px; /* Spacing between links */
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #aef359; /* Bright, neon-like yellow on hover */
+  text-shadow: 0 0 10px #aef359; /* Glowing effect */
+}
+
+/* Adding a hover effect to the navbar brand for consistency */
+.navbar-brand:hover {
+  color: #aef359; /* Matching the nav-link hover color */
+  text-shadow: 0 0 10px #aef359; /* Glowing effect */
+}
+
+/* Responsive Flex Container for Navbar Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjustments for Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .nav-links {
+    margin-top: 20px;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px; /* Spacing for stacked links */
+  }
+}
+/* Base Hero Section styles */
+.hero-section {
+  background-color: #282c34;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem; /* Adjusted by media queries */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hero-section p {
+  font-size: 1.2rem; /* Adjusted by media queries */
+}
+
+.hero-section:hover h1 {
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) { /* For tablets */
+  .hero-section {
+    padding: 80px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) { /* For medium-sized devices */
+  .hero-section {
+    padding: 60px 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) { /* For mobile phones */
+  .hero-section {
+    padding: 50px 5px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+}
+.section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.section h2 {
+  font-size: 2.8rem;
+  color: #282c34;
+  margin-bottom: 30px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .section {
+    padding: 40px 15px; /* Reduced padding */
+  }
+
+  .section h2 {
+    font-size: 2.2rem; /* Slightly smaller font size */
+  }
+
+  .section p {
+    font-size: 1rem; /* Adjusted font size for readability */
+  }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .section {
+    padding: 50px 18px; /* Adjusted padding */
+  }
+
+  .section h2 {
+    font-size: 2.5rem; /* Adjusted font size */
+  }
+
+  .section p {
+    font-size: 1.05rem; /* Adjusted font size */
+  }
+}
+
+/* Large devices (desktops, 901px and up) */
+@media only screen and (min-width: 901px) {
+  .section h2 {
+    font-size: 2.8rem; /* Back to original font size for large screens */
+  }
+
+  .section p {
+    font-size: 1.1rem; /* Back to original font size */
+  }
+}
+
+/* Specific styles for About Me section */
+.about-section {
+  background-color: #fff; /* Consistent background color */
+  padding: 50px 20px; /* Ample padding for spacing */
+  text-align: center; /* Center-aligned text */
+  color: #333; /* Dark text for readability */
+  margin-bottom: 20px; /* Space between sections */
+  /* Inherits styles from .section */
+}
+
+.about-section p {
+  font-size: 1rem; /* Comfortable reading size for paragraph text */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space between paragraphs */
+  text-align: justify; /* Left-aligned text for easier reading */
+  max-width: 800px; /* Max width for text for readability */
+  margin-left: auto; /* Centering the paragraph */
+  margin-right: auto; /* Centering the paragraph */
+  /* Inherits and/or overrides styles from .section p if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Tablets and below */
+  .about-section {
+    padding: 40px 15px; /* Slightly smaller padding */
+  }
+
+  .about-section p {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 576px) { /* Small devices (landscape phones, 576px and below) */
+  .about-section {
+    padding: 30px 10px; /* Reduced padding for small devices */
+  }
+
+  .about-section p {
+    font-size: 0.8rem; /* Further reduced font size for small screens */
+    text-align: justify; /* Optionally, justify text for better alignment */
+    max-width: 100%; /* Allows text to fill the container */
+  }
+}
+
+
+/* Responsive Design adjustments */
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 2rem; /* Slightly smaller font size for mobile */
+  }
+
+  .section p {
+    font-size: 0.9rem; /* Slightly smaller font size for paragraphs on mobile */
+  }
+}
+/* Enhanced Portfolio Badges Container */
+.badge-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  perspective: 1500px; /* Adds perspective to all children */
+}
+
+.badge {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d; /* Allows children to be in 3D space */
+  cursor: pointer;
+  width: 100%; /* Ensures badges occupy full width */
+}
+
+.badge:hover {
+  transform: rotateY(20deg) scale(1.05); /* 3D rotation effect on hover */
+}
+
+.badge img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  backface-visibility: hidden; /* Hides the back part of the flip effect */
+}
+
+.badge:hover::after, .badge:hover p {
+  opacity: 1;
+  transform: translateZ(30px); /* Brings the overlay and text forward in 3D space */
+}
+
+/* Dynamic Glowing Backgrounds */
+.badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5), rgba(255, 0, 255, 0.5));
+  border-radius: 20px;
+  z-index: -1;
+  animation: glow 8s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes glow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Initial Animation */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.badge {
+  animation: popIn 0.5s ease-out forwards;
+}
+
+/* Ensures the text and overlay pop out on hover */
+.badge::after, .badge p {
+  transition: all 0.5s ease;
+  transform: translateZ(0);
+}
+
+/* Adds a unique hover effect for each badge */
+.badge:nth-child(odd):hover::before {
+  background: linear-gradient(45deg, rgba(0, 255, 0, 0.5), rgba(255, 255, 255, 0.5));
+}
+
+.badge:nth-child(even):hover::before {
+  background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 0, 0, 0.5));
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .badge-container {
+    justify-content: space-around; /* Align badges evenly on smaller screens */
+    padding: 0 10px; /* Add padding to prevent badges from sticking to edges */
+  }
+}
+/* Contact Section styles */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-info,
+.social-media-box {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.contact-info p,
+.social-media-box h3 {
+  margin-bottom: 20px;
+  font-size: 1.1rem; /* Adjusted font size */
+}
+
+.contact-info img,
+.social-media-box img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.contact-info a,
+.social-media-box a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover,
+.social-media-box a:hover {
+  color: #007bff;
+}
+
+.social-media-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media-box li {
+  display: inline-block;
+}
+
+.social-media-box li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-media-box li img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .social-media-box {
+    max-width: 90%; /* Adjust width to fit smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .contact-info p,
+  .social-media-box h3 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-media-box ul {
+    flex-direction: column; /* Stack social media icons vertically */
+  }
+
+  .social-media-box li {
+    margin: 10px 0; /* Add margin for vertical layout */
+  }
+}
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 15px; /* Decrease padding on smaller screens */
+    font-size: 0.8rem; /* Decrease font size on smaller screens */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem; /* Reduced font size for the hero section's heading */
+  }
+
+  .section {
+    padding: 40px 15px; /* Adjusted padding for a tighter layout on smaller screens */
+  }
+
+  .badge-container {
+    flex-direction: column; /* Stacks badge elements vertically */
+    align-items: center; /* Centers badges horizontally within the container */
+  }
+
+  .badge img {
+    max-width: 100%; /* Ensures images are not wider than their container */
+  }
+}
